@@ -2,7 +2,8 @@
 
 ## https://evo-blackjack.surge.sh/
 
-Copy of my course project with some fine tuning
+Copy of my course project with some fine tuning.
+Added: background music
 
 Welcome to my version of first person blackjack!
 

@@ -112,3 +112,9 @@ export interface IPlayerSpotProps {
   endgameStatus: endgameStatus;
   status: PlayerSpotStatus;
 }
+
+export enum SoundType {
+  Click = "click",
+  Chip = "chip",
+  Background = "background",
+}
