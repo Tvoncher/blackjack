@@ -1,7 +1,7 @@
 # First Person Blackjack written with React + React-babylonjs + MobX
 ![img](https://github.com/Tvoncher/blackjack/assets/116438158/a1ebe528-abdb-4c43-97b7-326490b46b02)
 
-## https://evo-blackjack.surge.sh/
+## https://blackjack21.surge.sh/
 
 Copy of my course project with some fine tuning.
 Added: bg music, menu
