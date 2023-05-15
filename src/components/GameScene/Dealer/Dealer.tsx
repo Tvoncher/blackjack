@@ -1,16 +1,18 @@
 import { FC, useEffect } from "react";
 import { Vector3 } from "@babylonjs/core/Maths/math.vector";
 import { mainStore } from "../../../stores/MainStore";
-import { NEON_COLOR } from "../../../utils/consts";
 import { useDealerAnimations } from "../../../hooks/useDealerAnimations";
 import { observer } from "mobx-react-lite";
 import { useGreetingAnimation } from "../../../hooks/useGreetingAnimation";
+import { useMainStore } from "../../../hooks/useMainStore";
 
 /* showing dealer animations and table (they r connected only because of my poor modelling skills)
 in future it's better to use separate meshes */
 const Dealer: FC = observer(() => {
   useGreetingAnimation();
   useDealerAnimations();
+
+  const { envColor } = useMainStore().settingsStore;
 
   // hiding loading screen when mounted (=== loaded)
   useEffect(() => {
@@ -27,12 +29,12 @@ const Dealer: FC = observer(() => {
         depth={0.005}
         position={new Vector3(0, 1.05, 0.2)}
       >
-        <standardMaterial name="glowing__material" emissiveColor={NEON_COLOR} />
+        <standardMaterial name="glowing__material" emissiveColor={envColor} />
       </box>
       <pointLight
         name="floor__light"
         position={new Vector3(0, 0.8, 1)}
-        diffuse={NEON_COLOR}
+        diffuse={envColor}
       />
     </>
   );

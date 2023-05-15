@@ -14,6 +14,7 @@ import BaseCamera from "./baseCamera/BaseCamera";
 import BabylonUI from "./BabylonUI/BabylonUI";
 import { useMainStore } from "../../hooks/useMainStore";
 import "@babylonjs/loaders/glTF/2.0/glTFLoader";
+import SoundsContainer from "../Sounds/SoundsContainer";
 
 // handling everything connected with babylonjs
 const GameScene: FC = observer(() => {
@@ -28,6 +29,7 @@ const GameScene: FC = observer(() => {
     <>
       <UI />
       {isLoading && <LoadingScreen />}
+      <SoundsContainer />
       <Engine antialias adaptToDeviceRatio className="canvas">
         <Scene
           blockMaterialDirtyMechanism

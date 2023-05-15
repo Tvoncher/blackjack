@@ -3,6 +3,7 @@ import { PlayerSpotsStore } from "./PlayerSpotsStore";
 import { configure, makeObservable, observable } from "mobx";
 import { UserStore } from "./UserStore";
 import { RoomStore } from "./RoomStore";
+import { SettingsStore } from "./SettingsStore";
 
 //handling all stores together
 configure({ enforceActions: "always" });
@@ -13,6 +14,8 @@ export class MainStore {
   roomStore: RoomStore = new RoomStore();
   @observable
   userStore: UserStore = new UserStore();
+  @observable
+  settingsStore: SettingsStore = new SettingsStore();
 
   constructor() {
     makeObservable(this);

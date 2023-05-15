@@ -1,0 +1,13 @@
+.menu {
+  position: absolute;
+  right: 0;
+  width: 150px;
+  height: 50px;
+  background: rgb(216, 205, 205, 0.1);
+  border-radius: 45px;
+  opacity: 0.5;
+}
+.menu_svg {
+  height: 100%;
+  cursor: pointer;
+}

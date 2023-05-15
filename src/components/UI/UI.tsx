@@ -4,14 +4,16 @@ import { RoomState } from "../../types/types";
 import WinLossPopup from "./WinLossPopup/WinLossPopup";
 import BalanceAndBet from "./BalanceAndBet/BalanceAndBet";
 import { useMainStore } from "../../hooks/useMainStore";
+import Menu from "./Menu/Menu";
 
- //handling all ui elements (except of babylonjs based cause of library limitations)
+//handling all ui elements (except of babylonjs based cause of library limitations)
 const UI: FC = observer(() => {
   const { roomState } = useMainStore().roomStore;
   return (
     <>
       <BalanceAndBet />
       {roomState === RoomState.ending && <WinLossPopup />}
+      <Menu />
     </>
   );
 });

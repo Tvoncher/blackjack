@@ -3,7 +3,6 @@ import { useState } from "react";
 import GameScene from "../GameScene/GameScene";
 import GreetingScreen from "../GreetingScrene/GreetingScreen";
 import "./App.css";
-import SoundsContainer from "../Sounds/SoundsContainer";
 
 function App() {
   const [isStarted, setIsStarted] = useState<boolean>(false);
@@ -17,7 +16,6 @@ function App() {
           <GreetingScreen setIsStarted={setIsStarted} />
         )}
       </div>
-      <SoundsContainer />
     </MainStoreContext.Provider>
   );
 }

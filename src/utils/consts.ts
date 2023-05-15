@@ -3,6 +3,7 @@ import {
   IBaseCameraParams,
   IBaseLightParams,
   IChipProps,
+  SoundType,
 } from "../types/types";
 import { Color3 } from "@babylonjs/core/Maths/math";
 
@@ -16,8 +17,6 @@ export const PLAYER_SPOT_DIAMETER: number = 0.1;
 export const CARD_SCALING: Vector3 = new Vector3(0.08, 0.08, 0.08);
 
 export const CHIP_HIGHLIGHTING_COLOR: Color3 = new Color3(0.7, 0.5, 0);
-
-export const NEON_COLOR: Color3 = new Color3(0, 0.7, 1);
 
 export const STARTING_BALANCE: number = 1000;
 
@@ -84,3 +83,5 @@ export const ENDING_ANIMATION_DURATION = 1400;
 export const ROUND_RESTART_WAIT_TIME = 5000;
 
 export const ROTATED_CARD_VECTOR: Vector3 = new Vector3(0, 0, Math.PI);
+
+export const BG_SOUND_ID = SoundType.Background;
