@@ -1,17 +1,16 @@
 # First Person Blackjack written with React + React-babylonjs + MobX
+![img](https://github.com/Tvoncher/blackjack/assets/116438158/a1ebe528-abdb-4c43-97b7-326490b46b02)
 
-## https://evo-blackjack.surge.sh/
+## https://blackjack21.surge.sh/
 
 Copy of my course project with some fine tuning.
-Added: background music
+Added: bg music, menu
 
 Welcome to my version of first person blackjack!
 
 My objective was to integrate 3D graphics from Babylonjs with JSX syntax and write code in the style of Reactjs, creating 3D objects as functional and reusable components.
 
 If you are interested in exploring my blackjack app, i suggest starting your journey with the GameScene component, which is responsible for rendering all 3D and will help you understand better how Babylonjs is intagrated with the JSX syntax.
-
-I will definitely continue developing this app after code review,so stay tuned :)
 
 ## Local launch
 
