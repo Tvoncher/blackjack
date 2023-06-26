@@ -1,6 +1,6 @@
 import { action, makeObservable, observable, reaction } from "mobx";
 import { ICard, RoomState } from "../types/types";
-import { shuffleDeck } from "../utils/utils";
+import { playEndgameSound, shuffleDeck } from "../utils/utils";
 import { clearStoresData, findActiveSpot } from "../utils/gameLogic";
 import { mainStore } from "./MainStore";
 import {
@@ -59,6 +59,7 @@ export class RoomStore {
             mainStore.playerSpotsStore.calculateRoundProfits();
             mainStore.playerSpotsStore.calculateTotalWin(mainStore);
             mainStore.userStore.addToBalance(mainStore.userStore.totalWin);
+            playEndgameSound(mainStore.userStore.totalWin);
             setTimeout(() => {
               clearStoresData();
               this.setRoomState(RoomState.waiting);

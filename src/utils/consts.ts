@@ -3,7 +3,6 @@ import {
   IBaseCameraParams,
   IBaseLightParams,
   IChipProps,
-  SoundType,
 } from "../types/types";
 import { Color3 } from "@babylonjs/core/Maths/math";
 
@@ -83,5 +82,3 @@ export const ENDING_ANIMATION_DURATION = 1400;
 export const ROUND_RESTART_WAIT_TIME = 5000;
 
 export const ROTATED_CARD_VECTOR: Vector3 = new Vector3(0, 0, Math.PI);
-
-export const BG_SOUND_ID = SoundType.Background;

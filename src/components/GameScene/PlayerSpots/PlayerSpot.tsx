@@ -2,7 +2,7 @@ import { FC, useEffect, useRef, useState } from "react";
 import { useClick } from "react-babylonjs";
 import { mainStore } from "../../../stores/MainStore";
 import { observer } from "mobx-react-lite";
-import { IPlayerSpotProps, RoomState } from "../../../types/types";
+import { ESoundID, IPlayerSpotProps, RoomState } from "../../../types/types";
 import CardsTooltip from "../BabylonUI/CardsTooltip";
 import { usePlayerSpotCamera } from "../../../hooks/usePlayerSpotCamera";
 import PlayerSpotChip from "./PlayerSpotChip";
@@ -13,6 +13,7 @@ import {
 } from "../../../utils/consts";
 import { placeBetOnPlayerSpot } from "../../../utils/playerSpot";
 import { useMainStore } from "../../../hooks/useMainStore";
+import { playSound } from "../../../utils/utils";
 
 //playerSpot itself
 const PlayerSpot: FC<IPlayerSpotProps> = observer(
@@ -26,6 +27,7 @@ const PlayerSpot: FC<IPlayerSpotProps> = observer(
       const selectedBet = mainStore.userStore.selectedChip;
       if (selectedBet > 0) {
         placeBetOnPlayerSpot(mainStore, index, selectedBet);
+        playSound(ESoundID.Chip);
 
         //need it to render chips on playerSpot
         setPlayerSpotChip(() => [...playerSpotChips, selectedBet]);

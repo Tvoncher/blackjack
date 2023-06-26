@@ -1,11 +1,22 @@
 import { mainStore } from "../stores/MainStore";
-import { ICard, IUser, RoomState } from "../types/types";
+import { ESoundID, ICard, IUser, RoomState } from "../types/types";
 import { STARTING_BALANCE } from "./consts";
 import { AnimationGroup } from "@babylonjs/core/Animations/animationGroup";
 import { Mesh } from "@babylonjs/core/Meshes/mesh";
 import { ActionManager } from "@babylonjs/core/Actions/actionManager";
 import { ExecuteCodeAction } from "@babylonjs/core/Actions/directActions";
 import { Vector3 } from "@babylonjs/core/Maths/math.vector";
+
+export const playSound = (soundId: ESoundID) => {
+  const audio = document.getElementById(soundId) as HTMLAudioElement;
+  audio.play();
+};
+
+export const playEndgameSound = (totalWin: number) => {
+  if (totalWin > 0) {
+    playSound(ESoundID.Win);
+  } else playSound(ESoundID.Lose);
+};
 
 export const shuffleDeck = () => {
   let shuffledDeck = [...initialDeck];

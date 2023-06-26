@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { observer } from "mobx-react-lite";
-import { BG_SOUND_ID } from "../../utils/consts";
 import { useMainStore } from "../../hooks/useMainStore";
+import { ESoundID } from "../../types/types";
 
 interface SoundsContainerProps {}
 
@@ -12,10 +12,13 @@ const SoundsContainer: FC<SoundsContainerProps> = observer(() => {
       <audio
         muted={isMuted}
         loop={true}
-        id={BG_SOUND_ID}
+        id={ESoundID.Background}
         src={"sounds/background.mp3" as string}
         autoPlay={true}
       />
+      <audio id={ESoundID.Chip} src={"sounds/chip.mp3" as string} />
+      <audio id={ESoundID.Win} src={"sounds/win.mp3" as string} />
+      <audio id={ESoundID.Lose} src={"sounds/lose.mp3" as string} />
     </div>
   );
 });

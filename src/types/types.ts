@@ -113,8 +113,10 @@ export interface IPlayerSpotProps {
   status: PlayerSpotStatus;
 }
 
-export enum SoundType {
+export enum ESoundID {
   Click = "click",
   Chip = "chip",
   Background = "background",
+  Win = "win",
+  Lose = "lose",
 }
