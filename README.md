@@ -1,5 +1,6 @@
 # First Person Blackjack written with React + React-babylonjs + MobX
-![img](https://github.com/Tvoncher/blackjack/assets/116438158/a1ebe528-abdb-4c43-97b7-326490b46b02)
+![img](https://github.com/Tvoncher/blackjack/assets/116438158/00db8f93-43ef-4915-802d-07ef7892f9b0)
+
 
 ## https://blackjack21.surge.sh/
 
